@@ -7,6 +7,19 @@ public class ReverseAString {
         String reversedStr = reverseAStringBruteForce("Manish is good boy");
 
         String reversedStrSame = reverseAStringbetterThanBruteForce("Manish is good boy");
+
+        System.out.println("Manish is good boy");
+        String reversedStrWithR = reverseRecursive("Manish is good boy");
+        System.out.println(reversedStrWithR);
+    }
+
+    public static String reverseRecursive(String str){
+
+        if(str.length()==1)
+            return str;
+        else{
+            return reverseRecursive(str.substring(1))+str.charAt(0);
+        }
     }
 
     //This is a brute force approach to reverse a string

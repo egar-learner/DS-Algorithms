@@ -1,5 +1,10 @@
+package Master_DS_Algo;
+
 public class FabonaciiProject {
 
+	//O(2^n)
+	//Has a exponential time as the input increases
+	//Even bad then n^2
 	public static int printFabonaci(int num) {
 		//Base Condition 1
 		if (num == 0) {

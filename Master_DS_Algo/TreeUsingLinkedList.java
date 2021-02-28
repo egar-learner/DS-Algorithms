@@ -82,10 +82,16 @@ public class TreeUsingLinkedList {
             }
 
             if(null == ((TreeNode)iteratorPointer).left && null == ((TreeNode)iteratorPointer).right){
-                if( ((TreeNode) ((TreeNode)previousRef).left).value == value )
+                if( ((TreeNode) ((TreeNode)previousRef).left).value == value ){
+                    Integer retVal = ((TreeNode)((TreeNode)previousRef).left).value;
                     ((TreeNode)previousRef).left = null;
-                else
+                    return retVal;
+                }
+                else{
+                    Integer retVal = ((TreeNode)((TreeNode)previousRef).right).value;
                     ((TreeNode)previousRef).right = null;
+                    return retVal;
+                }
             } else {
                 Object previousOfSuccesor = iteratorPointer;
                 Object successor = findSuccessor(iteratorPointer, previousOfSuccesor);
@@ -98,13 +104,20 @@ public class TreeUsingLinkedList {
                 ((TreeNode)successor).left = ((TreeNode)iteratorPointer).left;
                 ((TreeNode)successor).right = ((TreeNode)iteratorPointer).right;
                 
-                if(null != ((TreeNode)previousOfSuccesor).right)
+                if(null != ((TreeNode)previousOfSuccesor).right){
+                    Integer retVal = ((TreeNode)((TreeNode)previousRef).right).value;
                     ((TreeNode)previousOfSuccesor).right = null;
-                else
+                    return retVal;
+                }
+                else{
+                    Integer retVal = ((TreeNode)((TreeNode)previousRef).left).value;
                     ((TreeNode)previousOfSuccesor).left =null;
+                    return retVal;
+                }
             }   
 
         }
+        
     } 
 
     public static Object findSuccessor(Object currentNodePassed, Object previousNode){

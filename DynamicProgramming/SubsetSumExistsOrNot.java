@@ -1,29 +1,29 @@
+package DynamicProgramming;
 
-//This program is to check what is the minimum difference of 2 subsets including all the elements 
-//W in this case is not the input from the User , rather can be considered as the sum of all the
-//elements
-//in the array
+
+//This program is to check whether a given sum's subset exists in the array or not
 //Input: wt[] = Contains the weights of different weight
-//		 W = weight of the subset containing all the elements or sum of all elements
+//		 W = weight of the subset we are seaching for
 //Output: true/false depending on whether or not the subset sum = given weight exists or not
 
 import java.util.Arrays;
 
-public class MinimumSumPartition {
+public class SubsetSumExistsOrNot {
 	
-	static int wt[] = {1,2,7};
+	static int wt[] = {1,2,3,4,5};
 	//static int val[] = {2,3,4,5,6};
 	static int len = wt.length;
-	static int W = 10;
+	static int W = 7;
 	
 	static boolean t[][] = new boolean[len+1][W+1];
 	
 	
 	public static void main(String[] args) {
-		for (boolean[] element : t)
-            Arrays.fill(element, false);
+		for(int i=0;i<t.length;i++)
+			Arrays.fill(t[i], false);
 		
 		System.out.println(t[0][0]);
+		System.out.println(t[3][4]);
 		
 		//Initialization
 		//Initializing all the values of first row and first column
@@ -37,6 +37,7 @@ public class MinimumSumPartition {
 		
 
 		System.out.println(t[0][0]);
+		System.out.println(t[3][4]);
 		
 		//Again 2 choices, whether to add that specific element to subset or not.
 		//If yes, take the max or 2 values , 
@@ -57,29 +58,6 @@ public class MinimumSumPartition {
 					
 				}
 			}
-		
-		for(int i = 0;i<t.length;i++) {
-			for(int j = 0;j<t[0].length;j++) {
-				System.out.print(t[i][j] + "\t");
-			}
-		System.out.println();
-		}
-	
-		
-		
-			int[] canBeSubset = new int[t[0].length/2];
-			for(int j = 1,i=t.length-1;j<t[0].length/2;j++) {
-				if(t[i][j])
-					canBeSubset[j-1] = j;
-				else
-					canBeSubset[j-1] = 0;
-			}
-			int minDifBtSetsInclAllEle = 999;
-			for (int i = 0;i<canBeSubset.length;i++) {
-				if(canBeSubset[i] != 0 && minDifBtSetsInclAllEle>(W-2*canBeSubset[i]))
-					minDifBtSetsInclAllEle = W-2*canBeSubset[i];
-			}
-			System.out.println(minDifBtSetsInclAllEle);
 		
 		System.out.println("Whether subSet sum exists for weight " + W + " "+ t[len][W]);
 				

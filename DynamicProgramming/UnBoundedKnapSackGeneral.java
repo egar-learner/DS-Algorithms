@@ -1,3 +1,5 @@
+package DynamicProgramming;
+
 //This program is for unbounded KnapSack where an element can be selected any number of times
 //Or where the element repeatition is allowed
 

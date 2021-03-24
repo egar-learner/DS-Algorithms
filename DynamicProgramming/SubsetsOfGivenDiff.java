@@ -1,3 +1,5 @@
+package DynamicProgramming;
+
 
 //This program is to find the number of subsets of a given difference
 //input:	Array

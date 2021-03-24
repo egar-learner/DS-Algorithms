@@ -1,3 +1,5 @@
+package DynamicProgramming;
+
 //This program is for unbounded KnapSack where we need to cut a rod to maximize its profit
 //W = length of rod 
 

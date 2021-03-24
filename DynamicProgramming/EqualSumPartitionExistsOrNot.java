@@ -1,3 +1,5 @@
+package DynamicProgramming;
+
 
 //This program is to check that if all the elements of a set can be divided into 2 subsets of
 //equal sum, if yes then it becomes the program

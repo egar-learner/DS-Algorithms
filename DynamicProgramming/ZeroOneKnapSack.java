@@ -1,3 +1,5 @@
+package DynamicProgramming;
+
 
 
 /* This program is to demonstrate and understand 0-1 KnapSack

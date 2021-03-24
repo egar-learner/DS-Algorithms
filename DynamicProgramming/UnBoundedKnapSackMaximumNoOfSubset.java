@@ -1,3 +1,5 @@
+package DynamicProgramming;
+
 //This program is for unbounded KnapSack where need to find the 
 //Maximum number of ways in which we can create the total sum given to us
 

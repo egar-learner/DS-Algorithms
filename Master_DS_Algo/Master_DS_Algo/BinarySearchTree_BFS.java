@@ -6,7 +6,7 @@ import java.util.ArrayList;
 // Java program to demonstrate 
 // insert operation in binary
 // search tree
-class BinarySearchTree {
+class BinarySearchTree_BFS {
  
     /* Class containing left 
        and right child of current node
@@ -27,7 +27,7 @@ class BinarySearchTree {
     Node root;
  
     // Constructor
-    BinarySearchTree() 
+    BinarySearchTree_BFS() 
     { 
          root = null; 
     }
@@ -106,7 +106,7 @@ class BinarySearchTree {
     // Driver Code
     public static void main(String[] args)
     {
-        BinarySearchTree tree = new BinarySearchTree();
+        BinarySearchTree_BFS tree = new BinarySearchTree_BFS();
  
         /* Let us create following BST
               50

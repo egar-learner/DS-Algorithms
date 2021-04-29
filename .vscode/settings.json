@@ -1,9 +1,10 @@
 {
     "java.project.sourcePaths": [
         "Problems",
+        "MultiThreading",
         "Master_DS_Algo",
         "DynamicProgramming/Java_New_Fundamentals/Volatile_KeyWord",
         "DynamicProgramming",
-        "MultiThreading"
+        "Design_Pattern"
     ]
 }

@@ -97,9 +97,9 @@ public class InterThreadComm {
 
         InterThreadComm inter = new InterThreadComm();
 
-        ProducerThread p = new ProducerThread();
+        ProducerThread p = inter.new ProducerThread();
 
-        ConsumerThread c = new ConsumerThread();
+        ConsumerThread c = inter.new ConsumerThread();
     }
 
     public static void main(String[] args) throws InterruptedException{

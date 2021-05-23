@@ -39,7 +39,7 @@ public class Test {
     } */
 
     interface TestInterface {
-        int test_Variable = 10;
+        default int test_Variable = 10;
     }
 
     public static void main(String[] args) {
